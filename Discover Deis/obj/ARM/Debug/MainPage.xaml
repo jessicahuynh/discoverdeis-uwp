@@ -1,0 +1,88 @@
+﻿<Page
+    x:Class="Discover_Deis.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Discover_Deis"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
+            <Pivot>
+                <PivotItem>
+                    <PivotItem.Header>
+                        <local:TabHeader Label="navigate" Glyph="&#xE726;" />
+                    </PivotItem.Header>
+                    <Frame>
+                        
+                    </Frame>
+                </PivotItem>
+                <PivotItem>
+                    <PivotItem.Header>
+                        <local:TabHeader Label="locations" Glyph="&#xE8FD;" />
+                    </PivotItem.Header>
+                    <Frame>
+                        
+                    </Frame>
+                </PivotItem>
+                <PivotItem>
+                    <PivotItem.Header>
+                        <local:TabHeader Label="tour" Glyph="&#xE707;" />
+                    </PivotItem.Header>
+                    <Frame>
+                        
+                    </Frame>
+                </PivotItem> 
+                <PivotItem>
+                    <PivotItem.Header>
+                        <local:TabHeader Label="search" Glyph="&#xE721;" />
+                    </PivotItem.Header>
+                    <Frame>
+                        
+                    </Frame>
+                </PivotItem>
+            </Pivot>
+        </ScrollViewer>
+
+        <CommandBar Grid.Row="1">
+            <CommandBar.CommandBarOverflowPresenterStyle>
+                <Style TargetType="CommandBarOverflowPresenter">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Width" Value="{ThemeResource FlyoutThemeMaxWidth}"/>
+                </Style>
+            </CommandBar.CommandBarOverflowPresenterStyle>
+
+            <AppBarButton Label="Share">
+                <AppBarButton.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72D;"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Emoji2" Label="Feedback" />
+                <AppBarButton Label="Print" FontFamily="Segoe MDL2 Assets">
+                    <AppBarButton.Icon>
+                        <FontIcon 
+                            FontFamily="Segoe MDL2 Assets" 
+                            Glyph="&#xE2F6;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton Icon="Setting" Label="Settings" />
+            </CommandBar.SecondaryCommands>
+
+            <CommandBar.Content>
+                <TextBlock x:ConnectionId='1' Name="bottomCurrentLoc" Text="current location" Margin="12,14"/>
+            </CommandBar.Content>
+        </CommandBar>
+
+
+    </Grid>
+</Page>
+

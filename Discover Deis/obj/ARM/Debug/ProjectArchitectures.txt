@@ -1,0 +1,1 @@
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\Discover Deis.csproj;arm
