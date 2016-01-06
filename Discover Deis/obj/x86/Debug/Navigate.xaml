@@ -5,69 +5,138 @@
     xmlns:local="using:Discover_Deis"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:ConnectionId='1' Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Name="navGrid"                               >
         <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:ConnectionId='1' x:Name="VisualStateGroup">
-                <VisualState x:ConnectionId='2' x:Name="VSPhone">
+            <VisualStateGroup x:ConnectionId='2' x:Name="LayoutGroup">
+                <VisualState x:ConnectionId='6' x:Name="VSPhone">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="inputPanel.Margin" Value="12,0,12,0" />
+                        <Setter Target="layoutGrid.Margin" Value="12,0,12,0" />
                     </VisualState.Setters>
                 </VisualState>
                 
-                <VisualState x:ConnectionId='3' x:Name="VSTablet">
+                <VisualState x:ConnectionId='7' x:Name="VSTablet">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="721" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="inputPanel.Margin" Value="24,0,24,0" />
+                        <Setter Target="layoutGrid.Margin" Value="24,0,24,0" />
                     </VisualState.Setters>
                 </VisualState>
 
-                <VisualState x:ConnectionId='4' x:Name="VSLaptop">
+                <VisualState x:ConnectionId='8' x:Name="VSLaptop">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="1025" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="inputPanel.Margin" Value="24,0,24,0" />
+                        <Setter Target="layoutGrid.Margin" Value="24,0,24,0" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+            <VisualStateGroup x:ConnectionId='3' x:Name="NavigateGroup">
+                <VisualState x:ConnectionId='4' x:Name="OneCol">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="startPanel.(Grid.Row)" Value="0" />
+                        <Setter Target="endPanel.(Grid.Row)" Value="1" />
+                        <Setter Target="mapPanel.(Grid.Row)" Value="2" />
+
+                        <Setter Target="startPanel.(Grid.Column)" Value="0" />
+                        <Setter Target="endPanel.(Grid.Column)" Value="0" />
+                        <Setter Target="mapPanel.(Grid.Column)" Value="0" />
+
+                        <Setter Target="startPanel.(Grid.ColumnSpan)" Value="2" />
+                        <Setter Target="endPanel.(Grid.ColumnSpan)" Value="2" />
+                        <Setter Target="mapPanel.(Grid.ColumnSpan)" Value="2" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='5' x:Name="TwoCols">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="721" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="startPanel.(Grid.Row)" Value="0" />
+                        <Setter Target="endPanel.(Grid.Row)" Value="0" />
+                        <Setter Target="mapPanel.(Grid.Row)" Value="1" />
+
+                        <Setter Target="startPanel.(Grid.Column)" Value="0" />
+                        <Setter Target="endPanel.(Grid.Column)" Value="1" />
+                        <Setter Target="mapPanel.(Grid.Column)" Value="0" />
+
+                        <Setter Target="mapPanel.(Grid.ColumnSpan)" Value="2" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*" />
+             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <StackPanel x:ConnectionId='5' VerticalAlignment="Top" Grid.Row="0" Name="inputPanel">
-            <StackPanel x:ConnectionId='7' Name="startPanel"
+        <StackPanel x:ConnectionId='9' Grid.Row="0" 
+                    Name="layoutGrid">
+            <Grid Margin="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <StackPanel x:ConnectionId='12' Name="startPanel"
                         Style="{StaticResource autocompletePanel}">
-                <TextBlock Text="start"
+                    <TextBlock Text="start"
                            Style="{StaticResource autocompleteLabel}"
                            Foreground="Green"/>
-                <AutoSuggestBox x:ConnectionId='10' Style="{StaticResource autocomplete}" 
+                    <AutoSuggestBox x:ConnectionId='17' Style="{StaticResource autocomplete}" 
                             PlaceholderText="current location"
                             Name="start" />
-            </StackPanel>
-            <StackPanel x:ConnectionId='8' Name="endPanel"
+                </StackPanel>
+
+                <StackPanel x:ConnectionId='13' Name="endPanel"
                         Style="{StaticResource autocompletePanel}">
-                <TextBlock Text="end"
+                    <TextBlock Text="end"
                            Style="{StaticResource autocompleteLabel}"
                            Foreground="Red"/>
-                <AutoSuggestBox x:ConnectionId='9' Style="{StaticResource autocomplete}"
+                    <AutoSuggestBox x:ConnectionId='16' Style="{StaticResource autocomplete}"
                             Name="end"
                             PlaceholderText="shapiro"/>
-            </StackPanel>
+                </StackPanel>
+
+                <RelativePanel x:ConnectionId='14' Name="mapPanel">
+                    <Maps:MapControl x:ConnectionId='15'
+                       x:Name="routeMap"            
+                       ZoomInteractionMode="GestureAndControl"
+                       TiltInteractionMode="GestureAndControl"   
+                       MapServiceToken="B_u2nd9sP8UJ4raLCWNG6Q"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                    />
+                </RelativePanel>
+
+
+            </Grid>
+
         </StackPanel>
 
-
-        <CommandBar Grid.Row="2">
+        <CommandBar x:ConnectionId='10' Grid.Row="1" Name="navCommandBar">
             <CommandBar.CommandBarOverflowPresenterStyle>
                 <Style TargetType="CommandBarOverflowPresenter">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -96,7 +165,7 @@
             </CommandBar.SecondaryCommands>
 
             <CommandBar.Content>
-                <TextBlock x:ConnectionId='6' Name="bottomCurrentLoc" Text="current location" Margin="12,14"/>
+                <TextBlock x:ConnectionId='11' Name="bottomCurrentLoc" Text="current location" Margin="12,14"/>
             </CommandBar.Content>
         </CommandBar>
 

@@ -14,6 +14,9 @@
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="inputPanel.Margin" Value="12,0,12,0" />
+                    </VisualState.Setters>
                 </VisualState>
 
                 <VisualState x:Name="VSTablet">
@@ -21,7 +24,7 @@
                         <AdaptiveTrigger MinWindowWidth="721" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-
+                        <Setter Target="inputPanel.Margin" Value="24,0,24,0" />
                     </VisualState.Setters>
                 </VisualState>
 
@@ -29,6 +32,9 @@
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="1025" />
                     </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="inputPanel.Margin" Value="24,0,24,0" />
+                    </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>

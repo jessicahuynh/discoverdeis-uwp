@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>86e1b2f4-eed2-4d04-9405-99d33d0ec837</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>A3BEC1EBFB27A5808B75FA5107BCD25E2F4BC5B591E70A1565567673832B94A2</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>797AE7B8B939F3CB35635638217A6BC9493F1DE973E1D9C7917988A58180681A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>86e1b2f4-eed2-4d04-9405-99d33d0ec837_1.0.0.0_x86__a0mw0w2cc5e0c</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>86e1b2f4-eed2-4d04-9405-99d33d0ec837_a0mw0w2cc5e0c!App</RegisteredUserModeAppID>
     <RegisteredPackageID>86e1b2f4-eed2-4d04-9405-99d33d0ec837</RegisteredPackageID>
@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-06T18:12:42.595</Modified>
+      <Modified>2016-01-06T21:30:26.612</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\x86\Debug\Discover Deis.exe">
       <PackagePath>entrypoint\Discover Deis.exe</PackagePath>
-      <Modified>2016-01-06T18:12:40.876</Modified>
+      <Modified>2016-01-06T21:30:26.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\autum\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -498,7 +498,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\x86\Debug\Discover Deis.xr.xml">
       <PackagePath>Discover Deis.xr.xml</PackagePath>
-      <Modified>2016-01-06T18:12:40.037</Modified>
+      <Modified>2016-01-06T21:27:05.536</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -506,11 +506,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-06T18:12:42.164</Modified>
+      <Modified>2016-01-06T21:27:07.031</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\x86\Debug\Core\Discover Deis.exe">
       <PackagePath>Discover Deis.exe</PackagePath>
-      <Modified>2016-01-06T18:12:42.587</Modified>
+      <Modified>2016-01-06T21:30:26.604</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

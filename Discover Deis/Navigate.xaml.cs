@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,25 @@ namespace Discover_Deis
         public Navigate()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Set the map location.
+            LocationManager.CenterMapOnCurrent(routeMap);
+        }
+
+        private void grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (Window.Current.Bounds.Width < 721)
+            {
+                mapPanel.Height = navGrid.ActualHeight - startPanel.ActualHeight - endPanel.ActualHeight - 78;
+            }
+            else
+            {
+                mapPanel.Height = navGrid.ActualHeight - startPanel.ActualHeight - 78;
+            }
+            
         }
     }
 }

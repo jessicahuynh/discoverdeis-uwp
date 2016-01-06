@@ -25,6 +25,7 @@ namespace Discover_Deis
         public MainPage()
         {
             this.InitializeComponent();
+
             navFrame.Navigate(typeof(Navigate));
         }
 
