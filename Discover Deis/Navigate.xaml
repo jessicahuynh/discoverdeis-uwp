@@ -8,13 +8,44 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VSPhone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="inputPanel.Margin" Value="12,0,12,0" />
+                    </VisualState.Setters>
+                </VisualState>
+                
+                <VisualState x:Name="VSTablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="721" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="inputPanel.Margin" Value="24,0,24,0" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="VSLaptop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1025" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="inputPanel.Margin" Value="24,0,24,0" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="10" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        
-        <StackPanel VerticalAlignment="Top" Grid.Row="1">
+
+        <StackPanel VerticalAlignment="Top" Grid.Row="0" Name="inputPanel">
             <StackPanel Name="startPanel"
                         Style="{StaticResource autocompletePanel}">
                 <TextBlock Text="start"
@@ -34,6 +65,40 @@
                             PlaceholderText="shapiro"/>
             </StackPanel>
         </StackPanel>
+
+
+        <CommandBar Grid.Row="2">
+            <CommandBar.CommandBarOverflowPresenterStyle>
+                <Style TargetType="CommandBarOverflowPresenter">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="MinWidth" Value="320"/>
+                </Style>
+            </CommandBar.CommandBarOverflowPresenterStyle>
+
+            <AppBarButton Label="Share">
+                <AppBarButton.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72D;"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Emoji2" Label="Feedback" />
+                <AppBarButton Label="Print" FontFamily="Segoe MDL2 Assets">
+                    <AppBarButton.Icon>
+                        <FontIcon 
+                            FontFamily="Segoe MDL2 Assets" 
+                            Glyph="&#xE2F6;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarSeparator />
+                <AppBarButton Icon="Setting" Label="Settings" />
+            </CommandBar.SecondaryCommands>
+
+            <CommandBar.Content>
+                <TextBlock Name="bottomCurrentLoc" Text="current location" Margin="12,14"/>
+            </CommandBar.Content>
+        </CommandBar>
 
     </Grid>
 </Page>

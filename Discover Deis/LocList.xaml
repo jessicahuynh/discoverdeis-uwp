@@ -8,6 +8,30 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VSPhone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+
+                <VisualState x:Name="VSTablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="721" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="VSLaptop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1025" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
     </Grid>
 </Page>
