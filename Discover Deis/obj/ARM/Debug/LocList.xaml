@@ -15,7 +15,8 @@
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="inputPanel.Margin" Value="12,0,12,0" />
+                        <Setter Target="view.IsPaneOpen" Value="True" />
+                        <Setter Target="view.DisplayMode" Value="Inline" />
                     </VisualState.Setters>
                 </VisualState>
 
@@ -24,7 +25,10 @@
                         <AdaptiveTrigger MinWindowWidth="721" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="inputPanel.Margin" Value="24,0,24,0" />
+                        <Setter Target="view.IsPaneOpen" Value="True" />
+                        <Setter Target="view.DisplayMode" Value="Inline" />
+
+                        <Setter Target="view.OpenPaneLength" Value="260" />
                     </VisualState.Setters>
                 </VisualState>
 
@@ -33,11 +37,90 @@
                         <AdaptiveTrigger MinWindowWidth="1025" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="inputPanel.Margin" Value="24,0,24,0" />
+                        <Setter Target="view.IsPaneOpen" Value="True" />
+                        <Setter Target="view.DisplayMode" Value="Inline" />
+
+                        <Setter Target="view.OpenPaneLength" Value="320" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
+
+        <SplitView x:ConnectionId='5' Name="view"                               >
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <ScrollViewer Grid.Row="0" HorizontalScrollMode="Disabled">
+                        blah blah blah blah blah blah hello world this is a thing
+                    </ScrollViewer>
+
+                    <CommandBar x:ConnectionId='6' Grid.Row="1" Name="listCommandBar">
+                        <CommandBar.CommandBarOverflowPresenterStyle>
+                            <Style TargetType="CommandBarOverflowPresenter">
+                                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                <Setter Property="MinWidth" Value="320"/>
+                            </Style>
+                        </CommandBar.CommandBarOverflowPresenterStyle>
+
+                        <AppBarButton Label="Filter" Icon="Filter" />
+                        <AppBarButton Label="Sort" Icon="Sort" />
+
+                    </CommandBar>
+                </Grid>
+            </SplitView.Pane>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                
+                <CommandBar x:ConnectionId='7' Grid.Row="1" Name="locProfileCommandBar">
+                    <CommandBar.CommandBarOverflowPresenterStyle>
+                        <Style TargetType="CommandBarOverflowPresenter">
+                            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            <Setter Property="MinWidth" Value="320"/>
+                        </Style>
+                    </CommandBar.CommandBarOverflowPresenterStyle>
+
+                    <AppBarButton Label="Share">
+                        <AppBarButton.Icon>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72D;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Label="Navigate">
+                        <AppBarButton.Icon>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE805;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+
+                    <CommandBar.SecondaryCommands>
+                        <AppBarButton Icon="Emoji2" Label="Feedback" />
+                        <AppBarButton Label="Print" FontFamily="Segoe MDL2 Assets">
+                            <AppBarButton.Icon>
+                                <FontIcon 
+                            FontFamily="Segoe MDL2 Assets" 
+                            Glyph="&#xE2F6;"/>
+                            </AppBarButton.Icon>
+                        </AppBarButton>
+                        <AppBarSeparator />
+                        <AppBarButton Icon="Setting" Label="Settings" />
+                    </CommandBar.SecondaryCommands>
+
+                    <CommandBar.Content>
+                        <TextBlock x:ConnectionId='8' Name="bottomCurrentLoc" Text="current location" Margin="12,14"/>
+                    </CommandBar.Content>
+                </CommandBar>
+            </Grid>
+
+        </SplitView>
 
     </Grid>
 </Page>

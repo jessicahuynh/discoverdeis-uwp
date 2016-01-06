@@ -253,7 +253,7 @@
                     <PivotItem.Header>
                         <local:TabHeader Label="locations" Glyph="&#xE8FD;" />
                     </PivotItem.Header>
-                    <Frame>
+                    <Frame Name="locListFrame">
 
                     </Frame>
                 </PivotItem>

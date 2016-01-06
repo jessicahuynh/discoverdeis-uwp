@@ -26,5 +26,13 @@ namespace Discover_Deis
         {
             this.InitializeComponent();
         }
+
+        private void view_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (Window.Current.Bounds.Width < 721)
+            {
+                view.OpenPaneLength = Window.Current.Bounds.Width;
+            }
+        }
     }
 }

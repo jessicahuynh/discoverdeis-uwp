@@ -27,6 +27,7 @@ namespace Discover_Deis
             this.InitializeComponent();
 
             navFrame.Navigate(typeof(Navigate));
+            locListFrame.Navigate(typeof(LocList));
         }
 
         private void MainPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)

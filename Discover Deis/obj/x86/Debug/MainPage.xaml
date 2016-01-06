@@ -245,7 +245,7 @@
                     <PivotItem.Header>
                         <local:TabHeader Label="navigate" Glyph="&#xE805;" />
                     </PivotItem.Header>
-                    <Frame x:ConnectionId='2' Name="navFrame">
+                    <Frame x:ConnectionId='3' Name="navFrame">
 
                     </Frame>
                 </PivotItem>
@@ -253,7 +253,7 @@
                     <PivotItem.Header>
                         <local:TabHeader Label="locations" Glyph="&#xE8FD;" />
                     </PivotItem.Header>
-                    <Frame>
+                    <Frame x:ConnectionId='2' Name="locListFrame">
 
                     </Frame>
                 </PivotItem>
