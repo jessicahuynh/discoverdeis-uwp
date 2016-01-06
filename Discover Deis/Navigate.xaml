@@ -8,6 +8,32 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel VerticalAlignment="Top" Grid.Row="1">
+            <StackPanel Name="startPanel"
+                        Style="{StaticResource autocompletePanel}">
+                <TextBlock Text="start"
+                           Style="{StaticResource autocompleteLabel}"
+                           Foreground="Green"/>
+                <AutoSuggestBox Style="{StaticResource autocomplete}" 
+                            PlaceholderText="current location"
+                            Name="start" />
+            </StackPanel>
+            <StackPanel Name="endPanel"
+                        Style="{StaticResource autocompletePanel}">
+                <TextBlock Text="end"
+                           Style="{StaticResource autocompleteLabel}"
+                           Foreground="Red"/>
+                <AutoSuggestBox Style="{StaticResource autocomplete}"
+                            Name="end"
+                            PlaceholderText="shapiro"/>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </Page>

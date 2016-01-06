@@ -14,12 +14,12 @@
         </Grid.RowDefinitions>
 
         <ScrollViewer Grid.Row="0" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
-            <Pivot>
+            <Pivot x:ConnectionId='2' Name="MainPivot"                                              >
                 <PivotItem>
                     <PivotItem.Header>
-                        <local:TabHeader Label="navigate" Glyph="&#xE726;" />
+                        <local:TabHeader Label="navigate" Glyph="&#xE805;" />
                     </PivotItem.Header>
-                    <Frame>
+                    <Frame x:ConnectionId='3' Name="navFrame">
                         
                     </Frame>
                 </PivotItem>
@@ -74,6 +74,7 @@
                             Glyph="&#xE2F6;"/>
                     </AppBarButton.Icon>
                 </AppBarButton>
+                <AppBarSeparator />
                 <AppBarButton Icon="Setting" Label="Settings" />
             </CommandBar.SecondaryCommands>
 

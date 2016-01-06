@@ -14,12 +14,12 @@
         </Grid.RowDefinitions>
 
         <ScrollViewer Grid.Row="0" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
-            <Pivot>
+            <Pivot Name="MainPivot" SelectionChanged="MainPivot_SelectionChanged">
                 <PivotItem>
                     <PivotItem.Header>
-                        <local:TabHeader Label="navigate" Glyph="&#xE726;" />
+                        <local:TabHeader Label="navigate" Glyph="&#xE805;" />
                     </PivotItem.Header>
-                    <Frame>
+                    <Frame Name="navFrame">
                         
                     </Frame>
                 </PivotItem>
@@ -55,7 +55,7 @@
                 <Style TargetType="CommandBarOverflowPresenter">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                    <Setter Property="Width" Value="{ThemeResource FlyoutThemeMaxWidth}"/>
+                    <Setter Property="Width" Value="{ThemeResource SearchBoxSuggestionPopupThemeMinWidth}"/>
                 </Style>
             </CommandBar.CommandBarOverflowPresenterStyle>
 
@@ -74,6 +74,7 @@
                             Glyph="&#xE2F6;"/>
                     </AppBarButton.Icon>
                 </AppBarButton>
+                <AppBarSeparator />
                 <AppBarButton Icon="Setting" Label="Settings" />
             </CommandBar.SecondaryCommands>
 

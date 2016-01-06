@@ -132,19 +132,33 @@ namespace Discover_Deis.Discover_Deis_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "Discover_Deis.TabHeader";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[2] = "String";
-            _typeNameTable[3] = "Discover_Deis.MainPage";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable = new string[12];
+            _typeNameTable[0] = "Windows.UI.Color";
+            _typeNameTable[1] = "System.ValueType";
+            _typeNameTable[2] = "Object";
+            _typeNameTable[3] = "Byte";
+            _typeNameTable[4] = "Discover_Deis.LocList";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[7] = "Discover_Deis.TabHeader";
+            _typeNameTable[8] = "String";
+            _typeNameTable[9] = "Discover_Deis.MainPage";
+            _typeNameTable[10] = "Discover_Deis.Navigate";
+            _typeNameTable[11] = "Discover_Deis.Tour";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::Discover_Deis.TabHeader);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[2] = typeof(global::System.String);
-            _typeTable[3] = typeof(global::Discover_Deis.MainPage);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable = new global::System.Type[12];
+            _typeTable[0] = typeof(global::Windows.UI.Color);
+            _typeTable[1] = typeof(global::System.ValueType);
+            _typeTable[2] = typeof(global::System.Object);
+            _typeTable[3] = typeof(global::System.Byte);
+            _typeTable[4] = typeof(global::Discover_Deis.LocList);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[7] = typeof(global::Discover_Deis.TabHeader);
+            _typeTable[8] = typeof(global::System.String);
+            _typeTable[9] = typeof(global::Discover_Deis.MainPage);
+            _typeTable[10] = typeof(global::Discover_Deis.Navigate);
+            _typeTable[11] = typeof(global::Discover_Deis.Tour);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -179,8 +193,11 @@ namespace Discover_Deis.Discover_Deis_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_TabHeader() { return new global::Discover_Deis.TabHeader(); }
-        private object Activate_3_MainPage() { return new global::Discover_Deis.MainPage(); }
+        private object Activate_4_LocList() { return new global::Discover_Deis.LocList(); }
+        private object Activate_7_TabHeader() { return new global::Discover_Deis.TabHeader(); }
+        private object Activate_9_MainPage() { return new global::Discover_Deis.MainPage(); }
+        private object Activate_10_Navigate() { return new global::Discover_Deis.Navigate(); }
+        private object Activate_11_Tour() { return new global::Discover_Deis.Tour(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -192,54 +209,139 @@ namespace Discover_Deis.Discover_Deis_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Discover_Deis.TabHeader
+            case 0:   //  Windows.UI.Color
+                userType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.AddMemberName("A");
+                userType.AddMemberName("B");
+                userType.AddMemberName("G");
+                userType.AddMemberName("R");
+                xamlType = userType;
+                break;
+
+            case 1:   //  System.ValueType
+                userType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 2:   //  Object
+                xamlType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  Byte
+                userType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Discover_Deis.LocList
+                userType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_LocList;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  Discover_Deis.TabHeader
                 userType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_0_TabHeader;
+                userType.Activator = Activate_7_TabHeader;
                 userType.AddMemberName("Label");
                 userType.AddMemberName("Glyph");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.UserControl
+            case 8:   //  String
                 xamlType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  String
-                xamlType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  Discover_Deis.MainPage
+            case 9:   //  Discover_Deis.MainPage
                 userType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_9_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 10:   //  Discover_Deis.Navigate
+                userType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_Navigate;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  Discover_Deis.Tour
+                userType = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_Tour;
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;
         }
 
 
-        private object get_0_TabHeader_Label(object instance)
+        private object get_0_Color_A(object instance)
+        {
+            var that = (global::Windows.UI.Color)instance;
+            return that.A;
+        }
+        private void set_0_Color_A(object instance, object Value)
+        {
+            var that = (global::Windows.UI.Color)instance;
+            that.A = (global::System.Byte)Value;
+        }
+        private object get_1_Color_B(object instance)
+        {
+            var that = (global::Windows.UI.Color)instance;
+            return that.B;
+        }
+        private void set_1_Color_B(object instance, object Value)
+        {
+            var that = (global::Windows.UI.Color)instance;
+            that.B = (global::System.Byte)Value;
+        }
+        private object get_2_Color_G(object instance)
+        {
+            var that = (global::Windows.UI.Color)instance;
+            return that.G;
+        }
+        private void set_2_Color_G(object instance, object Value)
+        {
+            var that = (global::Windows.UI.Color)instance;
+            that.G = (global::System.Byte)Value;
+        }
+        private object get_3_Color_R(object instance)
+        {
+            var that = (global::Windows.UI.Color)instance;
+            return that.R;
+        }
+        private void set_3_Color_R(object instance, object Value)
+        {
+            var that = (global::Windows.UI.Color)instance;
+            that.R = (global::System.Byte)Value;
+        }
+        private object get_4_TabHeader_Label(object instance)
         {
             var that = (global::Discover_Deis.TabHeader)instance;
             return that.Label;
         }
-        private void set_0_TabHeader_Label(object instance, object Value)
+        private void set_4_TabHeader_Label(object instance, object Value)
         {
             var that = (global::Discover_Deis.TabHeader)instance;
             that.Label = (global::System.String)Value;
         }
-        private object get_1_TabHeader_Glyph(object instance)
+        private object get_5_TabHeader_Glyph(object instance)
         {
             var that = (global::Discover_Deis.TabHeader)instance;
             return that.Glyph;
         }
-        private void set_1_TabHeader_Glyph(object instance, object Value)
+        private void set_5_TabHeader_Glyph(object instance, object Value)
         {
             var that = (global::Discover_Deis.TabHeader)instance;
             that.Glyph = (global::System.String)Value;
@@ -252,19 +354,43 @@ namespace Discover_Deis.Discover_Deis_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "Windows.UI.Color.A":
+                userType = (global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
+                xamlMember = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlMember(this, "A", "Byte");
+                xamlMember.Getter = get_0_Color_A;
+                xamlMember.Setter = set_0_Color_A;
+                break;
+            case "Windows.UI.Color.B":
+                userType = (global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
+                xamlMember = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlMember(this, "B", "Byte");
+                xamlMember.Getter = get_1_Color_B;
+                xamlMember.Setter = set_1_Color_B;
+                break;
+            case "Windows.UI.Color.G":
+                userType = (global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
+                xamlMember = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlMember(this, "G", "Byte");
+                xamlMember.Getter = get_2_Color_G;
+                xamlMember.Setter = set_2_Color_G;
+                break;
+            case "Windows.UI.Color.R":
+                userType = (global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
+                xamlMember = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlMember(this, "R", "Byte");
+                xamlMember.Getter = get_3_Color_R;
+                xamlMember.Setter = set_3_Color_R;
+                break;
             case "Discover_Deis.TabHeader.Label":
                 userType = (global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Discover_Deis.TabHeader");
                 xamlMember = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlMember(this, "Label", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_0_TabHeader_Label;
-                xamlMember.Setter = set_0_TabHeader_Label;
+                xamlMember.Getter = get_4_TabHeader_Label;
+                xamlMember.Setter = set_4_TabHeader_Label;
                 break;
             case "Discover_Deis.TabHeader.Glyph":
                 userType = (global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Discover_Deis.TabHeader");
                 xamlMember = new global::Discover_Deis.Discover_Deis_XamlTypeInfo.XamlMember(this, "Glyph", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_1_TabHeader_Glyph;
-                xamlMember.Setter = set_1_TabHeader_Glyph;
+                xamlMember.Getter = get_5_TabHeader_Glyph;
+                xamlMember.Setter = set_5_TabHeader_Glyph;
                 break;
             }
             return xamlMember;

@@ -5,4 +5,19 @@
     xmlns:local="using:Discover_Deis"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <Color x:Key="BrandeisBlue">#0070FF</Color>
+
+        <Style TargetType="StackPanel" x:Key="autocompletePanel">
+            <Setter Property="Margin" Value="0,0,0,12" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="autocompleteLabel">
+            <Setter Property="Margin" Value="0,0,0,7" />
+        </Style>
+        <Style TargetType="AutoSuggestBox" x:Key="autocomplete">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+    </Application.Resources>
+
 </Application>

@@ -25,6 +25,28 @@ namespace Discover_Deis
         public MainPage()
         {
             this.InitializeComponent();
+            navFrame.Navigate(typeof(Navigate));
+        }
+
+        private void MainPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+#if false
+            for (int i = 0; i < MainPivot.Items.Count; i++)
+            {
+                if (i == MainPivot.SelectedIndex)
+                {
+                    PivotItem selectedPivotItem = MainPivot.SelectedItem as PivotItem;
+                    (selectedPivotItem.Header as TabHeader).Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+
+                }
+                else
+                {
+                    PivotItem unselectedPivotItem = MainPivot.Items[i] as PivotItem;
+                    (unselectedPivotItem.Header as TabHeader).Foreground = new SolidColorBrush(Windows.UI.Colors.DarkBlue);
+                }
+            } 
+#endif
+
         }
     }
 }
