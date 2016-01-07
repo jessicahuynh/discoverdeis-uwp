@@ -1,3 +1,14 @@
 *.sln
 *.exe
 *.pfx
+Discover Deis/bin/ARM/Debug/*.exe
+Discover Deis/bin/ARM/Debug/*.pdb
+
+Discover Deis/bin/x86/Debug/*.exe
+Discover Deis/bin/x86/Debug/*.pdb
+
+Discover Deis/obj/ARM/Debug/*.exe
+Discover Deis/obj/ARM/Debug/*.pdb
+
+Discover Deis/obj/x86/Debug/*.exe
+Discover Deis/obj/x86/Debug/*.pdb
