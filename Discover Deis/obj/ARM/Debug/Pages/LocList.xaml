@@ -10,8 +10,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:ConnectionId='2' x:Name="VisualStateGroup">
-                <VisualState x:ConnectionId='3' x:Name="VSPhone">
+            <VisualStateGroup x:ConnectionId='2' x:Name="paneTriggers">
+                <VisualState x:ConnectionId='7' x:Name="VSPhone">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
@@ -21,9 +21,9 @@
                     </VisualState.Setters>
                 </VisualState>
 
-                <VisualState x:ConnectionId='4' x:Name="VSTablet">
+                <VisualState x:ConnectionId='8' x:Name="VSTablet">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="721" />
+                        <AdaptiveTrigger MinWindowWidth="720" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="view.IsPaneOpen" Value="True" />
@@ -33,9 +33,9 @@
                     </VisualState.Setters>
                 </VisualState>
 
-                <VisualState x:ConnectionId='5' x:Name="VSLaptop">
+                <VisualState x:ConnectionId='9' x:Name="VSLaptop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1025" />
+                        <AdaptiveTrigger MinWindowWidth="1024" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="view.IsPaneOpen" Value="True" />
@@ -45,9 +45,63 @@
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
+
+            <VisualStateGroup x:ConnectionId='3' x:Name="contentLayout">
+                <VisualState x:ConnectionId='4' x:Name="oneCol">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="locCategories.(RelativePanel.Below)" Value="locTitle" />
+
+                        <Setter Target="locPic.(Grid.Row)" Value="0" />
+                        <Setter Target="locPic.(Grid.Column)" Value="0" />
+                        <Setter Target="locPic.(Grid.ColumnSpan)" Value="3" />
+
+                        <Setter Target="locText.(Grid.Row)" Value="1" />
+                        <Setter Target="locText.(Grid.Column)" Value="0" />
+                        <Setter Target="locText.(Grid.ColumnSpan)" Value="3" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='5' x:Name="twoCol">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="locCategories.(RelativePanel.Below)" Value="locTitle" />
+
+                        <Setter Target="locPic.(Grid.Row)" Value="0" />
+                        <Setter Target="locPic.(Grid.Column)" Value="0" />
+                        <Setter Target="locPic.(Grid.ColumnSpan)" Value="1" />
+
+                        <Setter Target="locText.(Grid.Row)" Value="1" />
+                        <Setter Target="locText.(Grid.Column)" Value="0" />
+                        <Setter Target="locText.(Grid.ColumnSpan)" Value="1" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='6' x:Name="threeCol">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="locCategories.(RelativePanel.RightOf)" Value="locTitle" />
+                        <Setter Target="locCategories.(RelativePanel.AlignBottomWith)" Value="locTitle"/>
+                        <Setter Target="locCategories.Margin" Value="7,0,0,7" />
+
+                        <Setter Target="locPic.(Grid.Row)" Value="0" />
+                        <Setter Target="locPic.(Grid.Column)" Value="0" />
+
+                        <Setter Target="locText.Margin" Value="24,0,0,0" />
+                        <Setter Target="locText.(Grid.Row)" Value="0" />
+                        <Setter Target="locText.(Grid.Column)" Value="1" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <SplitView x:ConnectionId='6' Name="view"                               >
+        <SplitView x:ConnectionId='10' Name="view"                               >
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -56,22 +110,22 @@
                     </Grid.RowDefinitions>
 
                     <ScrollViewer Grid.Row="0" HorizontalScrollMode="Disabled">
-                        <ListView x:ConnectionId='8'                            
+                        <ListView x:ConnectionId='12'                            
                                   IsItemClickEnabled="True"
                                   Name="listOfLocs"
                                                                   >
                             <ListView.ItemTemplate>
                                 <DataTemplate                      >
-                                    <StackPanel x:ConnectionId='9' Orientation="Horizontal" Margin="0,7,0,7">
+                                    <StackPanel x:ConnectionId='13' Orientation="Horizontal" Margin="0,7,0,7">
                                         <Image Source="http://lorempixel.com/50/50/" Width="50" Margin="0,0,7,0" VerticalAlignment="Center"/>
                                         <RichTextBlock IsTextSelectionEnabled="False" TextTrimming="WordEllipsis" TextWrapping="NoWrap">
                                             <Paragraph FontSize="16">
-                                                <Run x:ConnectionId='11'                         />
+                                                <Run x:ConnectionId='15'                         />
                                                 <Run Text="-" />
-                                                <Run x:ConnectionId='12'                      />
+                                                <Run x:ConnectionId='16'                      />
                                             </Paragraph>
                                             <Paragraph FontSize="14">
-                                                <Run x:ConnectionId='10'                          />
+                                                <Run x:ConnectionId='14'                          />
                                             </Paragraph>
                                         </RichTextBlock>
                                     </StackPanel>
@@ -80,7 +134,7 @@
                         </ListView>
                     </ScrollViewer>
                     
-                    <CommandBar x:ConnectionId='7' Grid.Row="1" Name="listCommandBar">
+                    <CommandBar x:ConnectionId='11' Grid.Row="1" Name="listCommandBar">
                         <CommandBar.CommandBarOverflowPresenterStyle>
                             <Style TargetType="CommandBarOverflowPresenter">
                                 <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -98,16 +152,51 @@
 
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
+                    <RowDefinition />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
-                <RelativePanel Grid.Row="0">
-                    <TextBlock x:ConnectionId='15' Name="locName" Style="{ThemeResource HeaderTextBlockStyle}" />
-                </RelativePanel>
-                
-                
-                <CommandBar x:ConnectionId='13' Grid.Row="1" Name="locProfileCommandBar">
+
+                <ScrollViewer x:ConnectionId='17' Grid.Row="0" Name="scrollContent">
+                    <RelativePanel x:ConnectionId='20' Grid.Row="0" 
+                                   Margin="12,0,12,0" 
+                                   Name="locDetail">
+                        <TextBlock x:ConnectionId='21' Name="locTitle" 
+                                   Style="{ThemeResource HeaderTextBlockStyle}" />
+                        <TextBlock x:ConnectionId='22' Name="locCategories" 
+                                   Style="{ThemeResource SubtitleTextBlockStyle}" />
+
+                        <Grid RelativePanel.Below="locCategories" 
+                              HorizontalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Image x:ConnectionId='23' Source="http://lorempixel.com/200/200/" Name="locPic" HorizontalAlignment="Center"/>
+
+                            <StackPanel x:ConnectionId='24' Name="locText" 
+                                        HorizontalAlignment="Stretch">
+                                <TextBlock x:ConnectionId='25' Name="locFunction" 
+                                           Style="{ThemeResource BodyTextBlockStyle}" 
+                                           Margin="0,0,0,24" 
+                                           TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='26' Name="locDescription" 
+                                           Style="{ThemeResource BodyTextBlockStyle}" 
+                                           TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Grid>
+                    </RelativePanel>
+                </ScrollViewer>
+
+
+                <CommandBar x:ConnectionId='18' Grid.Row="1" Name="locProfileCommandBar">
                     <CommandBar.CommandBarOverflowPresenterStyle>
                         <Style TargetType="CommandBarOverflowPresenter">
                             <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -141,7 +230,7 @@
                     </CommandBar.SecondaryCommands>
 
                     <CommandBar.Content>
-                        <TextBlock x:ConnectionId='14' Name="bottomCurrentLoc" Text="current location" Margin="12,14"/>
+                        <TextBlock x:ConnectionId='19' Name="bottomCurrentLoc" Text="current location" Margin="12,14"/>
                     </CommandBar.Content>
                 </CommandBar>
             </Grid>

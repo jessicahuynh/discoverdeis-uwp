@@ -22,7 +22,7 @@
                 
                 <VisualState x:ConnectionId='7' x:Name="VSTablet">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="721" />
+                        <AdaptiveTrigger MinWindowWidth="720" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="layoutGrid.Margin" Value="24,0,24,0" />
@@ -31,7 +31,7 @@
 
                 <VisualState x:ConnectionId='8' x:Name="VSLaptop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1025" />
+                        <AdaptiveTrigger MinWindowWidth="1024" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="layoutGrid.Margin" Value="24,0,24,0" />
@@ -61,7 +61,7 @@
 
                 <VisualState x:ConnectionId='5' x:Name="TwoCols">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="721" />
+                        <AdaptiveTrigger MinWindowWidth="720" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="startPanel.(Grid.Row)" Value="0" />
@@ -123,7 +123,7 @@
                        x:Name="routeMap"            
                        ZoomInteractionMode="GestureAndControl"
                        TiltInteractionMode="GestureAndControl"   
-                       MapServiceToken=""
+                       MapServiceToken="B_u2nd9sP8UJ4raLCWNG6Q"
                        RelativePanel.AlignBottomWithPanel="True"
                        RelativePanel.AlignTopWithPanel="True"
                        RelativePanel.AlignLeftWithPanel="True"

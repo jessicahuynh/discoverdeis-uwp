@@ -11,10 +11,10 @@
     IsTabStop="False">
 
 
-    <Grid>
+    <Grid x:ConnectionId='1' Name="tabheaders">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <VisualState x:ConnectionId='1' x:Name="Narrow">
+                <VisualState x:ConnectionId='2' x:Name="Narrow">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
@@ -24,9 +24,9 @@
                         <Setter Target="LabelText.(RelativePanel.AlignHorizontalCenterWith)" Value="Icon" />
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='2' x:Name="Wide">
+                <VisualState x:ConnectionId='3' x:Name="Wide">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="500" />
+                        <AdaptiveTrigger MinWindowWidth="720" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="Icon.(RelativePanel.AlignVerticalCenterWithPanel)" Value="True" />
@@ -38,13 +38,13 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <RelativePanel x:ConnectionId='3' x:Name="RelativePanel">
-            <FontIcon x:ConnectionId='4' x:Name="Icon"
+        <RelativePanel x:ConnectionId='4' x:Name="RelativePanel">
+            <FontIcon x:ConnectionId='5' x:Name="Icon"
                       HorizontalAlignment="Center"
                       Margin="0,12,0,0"
                       Glyph="{Binding Glyph}"
                       FontSize="16" />
-            <TextBlock x:ConnectionId='5' x:Name="LabelText"
+            <TextBlock x:ConnectionId='6' x:Name="LabelText"
                        Text="{Binding Label}"
                        Style="{StaticResource CaptionTextBlockStyle}"
                        Margin="2,4,2,4" />

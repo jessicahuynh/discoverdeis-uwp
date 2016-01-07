@@ -40,7 +40,10 @@ namespace Discover_Deis
             if (Window.Current.Bounds.Width < 720)
             {
                 view.OpenPaneLength = Window.Current.Bounds.Width;
+                locDetail.Width = Window.Current.Bounds.Width - 24;
             }
+
+            scrollContent.Height = Window.Current.Bounds.Height - locProfileCommandBar.ActualHeight - 74;
         }
 
         private void listOfLocs_ItemClick(object sender, ItemClickEventArgs e)
@@ -49,7 +52,6 @@ namespace Discover_Deis
             {
                 view.IsPaneOpen = false;
 
-                //systemNavigationManager.BackRequested += DetailPage_BackRequested;
                 SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
                 systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
             }
@@ -58,6 +60,8 @@ namespace Discover_Deis
             List<string> cat = selectedLoc.category;
 
             locTitle.Text = selectedLoc.name;
+            locFunction.Text = selectedLoc.function;
+            locDescription.Text = selectedLoc.description;
             if (cat != null)
             {
                 if (cat.Count == 1)
@@ -83,7 +87,19 @@ namespace Discover_Deis
             {
                 view.IsPaneOpen = true;
                 systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+                e.Handled = true;
             }
+        }
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested += LocList_BackRequested;
+            base.OnNavigatedTo(e);
+        }
+
+        private void LocList_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (this.Frame.CanGoBack) this.Frame.GoBack();
         }
     }
 }
