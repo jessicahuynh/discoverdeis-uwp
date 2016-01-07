@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -42,6 +43,16 @@ namespace Discover_Deis
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
+            var appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
+
+            Color bb = new Color();
+            bb = Color.FromArgb(1,0, 112, 255);
+
+            appView.TitleBar.BackgroundColor = bb;
+            appView.TitleBar.ButtonBackgroundColor = bb;
+            appView.TitleBar.ForegroundColor = Colors.White;
+            appView.TitleBar.ButtonForegroundColor = Colors.White;
 
             Frame rootFrame = Window.Current.Content as Frame;
 

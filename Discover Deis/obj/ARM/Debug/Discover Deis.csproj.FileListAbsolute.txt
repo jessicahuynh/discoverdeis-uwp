@@ -1,6 +1,5 @@
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\ApplicationInsights.config
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\App.xbf
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\MainPage.xbf
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\TabHeader.xbf
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\Discover Deis.xr.xml
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\Discover Deis.exe
@@ -118,16 +117,12 @@ C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\System.Xml.X
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\System.Xml.XmlSerializer.dll
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\App.g.i.cs
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\App.g.cs
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\MainPage.g.i.cs
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\MainPage.g.cs
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\TabHeader.g.i.cs
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\TabHeader.g.cs
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\XamlTypeInfo.g.cs
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\App.xaml
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\MainPage.xaml
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\TabHeader.xaml
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\App.xbf
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\MainPage.xbf
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\TabHeader.xbf
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\XamlSaveStateFile.xml
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Discover Deis.exe
@@ -199,18 +194,25 @@ C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\qualifiers.t
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\ProjectArchitectures.txt
 C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Discover Deis.csprojResolveAssemblyReference.cache
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\LocList.xbf
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\Navigate.xbf
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\Tour.xbf
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\LocList.g.i.cs
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\LocList.g.cs
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Navigate.g.i.cs
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Navigate.g.cs
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Tour.g.i.cs
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Tour.g.cs
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\LocList.xaml
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Navigate.xaml
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Tour.xaml
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\LocList.xbf
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Navigate.xbf
-C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Tour.xbf
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\Pages\LocList.xbf
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\Pages\MainPage.xbf
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\Pages\Navigate.xbf
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\Pages\Tour.xbf
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\SQLite.Net.Platform.WinRT.dll
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\bin\ARM\Debug\SQLite.Net.dll
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\LocList.g.i.cs
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\LocList.g.cs
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\MainPage.g.i.cs
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\MainPage.g.cs
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\Navigate.g.i.cs
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\Navigate.g.cs
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\Tour.g.i.cs
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\Tour.g.cs
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\LocList.xaml
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\MainPage.xaml
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\Navigate.xaml
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\Tour.xaml
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\LocList.xbf
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\MainPage.xbf
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\Navigate.xbf
+C:\Users\autum\Desktop\discoverdeis-uwp\Discover Deis\obj\ARM\Debug\Pages\Tour.xbf

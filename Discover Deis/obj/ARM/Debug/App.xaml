@@ -8,8 +8,10 @@
     <Application.Resources>
         <Color x:Key="BrandeisBlue">#0070FF</Color>
         <Color x:Key="DeepBlue">#003e8c</Color>
-        <SolidColorBrush x:Key="BrandeiBlueBrush" Color="{StaticResource BrandeisBlue}" />
+        <Color x:Key="LightBlue">#4C9BFF</Color>
+        <SolidColorBrush x:Key="BrandeisBlueBrush" Color="{StaticResource BrandeisBlue}" />
         <SolidColorBrush x:Key="DeepBlueBrush" Color="{StaticResource DeepBlue}" />
+        <SolidColorBrush x:Key="LightBlueBrush" Color="{StaticResource LightBlue}" />
 
         <Style TargetType="StackPanel" x:Key="autocompletePanel">
             <Setter Property="Margin" Value="0,0,0,12" />
@@ -22,6 +24,40 @@
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
 
+        <Style TargetType="ListViewItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <ListViewItemPresenter
+                        ContentTransitions="{TemplateBinding ContentTransitions}"
+                        SelectionCheckMarkVisualEnabled="True"
+                        CheckBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                        CheckBoxBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                        DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}"
+                        DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}"
+                        FocusBorderBrush="{ThemeResource SystemControlForegroundAltHighBrush}"
+                        FocusSecondaryBorderBrush="{ThemeResource SystemControlForegroundBaseHighBrush}"
+                        PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}"
+                        PointerOverBackground="{ThemeResource SystemControlHighlightListLowBrush}"
+                        PointerOverForeground="{ThemeResource SystemControlHighlightAltBaseHighBrush}"
+                        SelectedBackground="{StaticResource BrandeisBlueBrush}"
+                        SelectedForeground="LightGray"
+                        SelectedPointerOverBackground="{ThemeResource LightBlueBrush}"
+                        PressedBackground="{ThemeResource SystemControlHighlightListMediumBrush}"
+                        SelectedPressedBackground="{ThemeResource BrandeisBlueBrush}"
+                        DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}"
+                        DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}"
+                        ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}"
+                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                        ContentMargin="{TemplateBinding Padding}"
+                        CheckMode="Inline"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        
         <Style TargetType="PivotHeaderItem">
             <Setter Property="Height" Value="Auto" />
             <Setter Property="RequestedTheme" Value="Dark" />
@@ -81,7 +117,7 @@
                                             </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Grid"
                                                                        Storyboard.TargetProperty="Background" >
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource BrandeiBlueBrush}" />
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource BrandeisBlueBrush}" />
                                             </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>

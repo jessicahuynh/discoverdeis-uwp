@@ -1,6 +1,6 @@
 App.xbf
-LocList.xbf
-MainPage.xbf
-Navigate.xbf
+Pages\LocList.xbf
+Pages\MainPage.xbf
+Pages\Navigate.xbf
+Pages\Tour.xbf
 TabHeader.xbf
-Tour.xbf
