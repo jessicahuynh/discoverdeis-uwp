@@ -80,6 +80,158 @@ namespace Discover_Deis.Models
                 function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
                 description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
                 category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" },
+                
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" },
+                nearby = new List<Loc> { locs[0], locs[1], locs[0] }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
+                area = new List<string> { "lower campus" }
+            });
+            locs.Add(new Loc()
+            {
+                id = "dharmic",
+                name = "Dharmic Prayer Space",
+                nickname = "D",
+                coordinates = new List<Coordinate>(){ new Coordinate(){ x = 42.364903, y = -71.255339 },
+                                                     new Coordinate(){ x = 42.364476, y = -71.254855 },
+                                                     new Coordinate(){ x = 42.364998, y = -71.253966 },
+                                                     new Coordinate(){ x = 42.365444, y = -71.254475 }
+                },
+                function = "The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come.",
+                description = "test tes test The newly inaugurated Dharmic Prayer Center is home to Brandeis' Namaskar and Sangha clubs, which together encompass Hindus, Buddhists, Jains, and Sikhs on campus, although all are welcome to come. test test test",
+                category = new List<string> { "religious", "student life" },
                 area = new List<string> { "lower campus" }
             });
 

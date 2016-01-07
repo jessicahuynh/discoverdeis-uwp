@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:Discover_Deis.Models"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -61,6 +62,10 @@
                         <Setter Target="locText.(Grid.Row)" Value="1" />
                         <Setter Target="locText.(Grid.Column)" Value="0" />
                         <Setter Target="locText.(Grid.ColumnSpan)" Value="3" />
+
+                        <Setter Target="locDetailed.(Grid.Row)" Value="2" />
+                        <Setter Target="locDetailed.(Grid.Column)" Value="0" />
+                        <Setter Target="locDetailed.(Grid.ColumnSpan)" Value="3" />
                     </VisualState.Setters>
                 </VisualState>
 
@@ -77,7 +82,14 @@
 
                         <Setter Target="locText.(Grid.Row)" Value="1" />
                         <Setter Target="locText.(Grid.Column)" Value="0" />
-                        <Setter Target="locText.(Grid.ColumnSpan)" Value="1" />
+
+                        <Setter Target="locMap.Margin" Value="24,0,0,0" />
+                        <Setter Target="locMap.(Grid.Row)" Value="0" />
+                        <Setter Target="locMap.(Grid.Column)" Value="1" />
+
+                        <Setter Target="locDetailed.Margin" Value="24,0,0,0" />
+                        <Setter Target="locDetailed.(Grid.Row)" Value="1" />
+                        <Setter Target="locDetailed.(Grid.Column)" Value="1" />
                     </VisualState.Setters>
                 </VisualState>
 
@@ -93,9 +105,19 @@
                         <Setter Target="locPic.(Grid.Row)" Value="0" />
                         <Setter Target="locPic.(Grid.Column)" Value="0" />
 
+                        <Setter Target="locMap.Margin" Value="0,24,0,0" />
+                        <Setter Target="locMap.(Grid.Row)" Value="1" />
+                        <Setter Target="locMap.(Grid.Column)" Value="0" />
+
                         <Setter Target="locText.Margin" Value="24,0,0,0" />
                         <Setter Target="locText.(Grid.Row)" Value="0" />
                         <Setter Target="locText.(Grid.Column)" Value="1" />
+                        <Setter Target="locText.(Grid.RowSpan)" Value="2" />
+
+                        <Setter Target="locDetailed.Margin" Value="24,0,0,0" />
+                        <Setter Target="locDetailed.(Grid.Row)" Value="0" />
+                        <Setter Target="locDetailed.(Grid.Column)" Value="2" />
+                        <Setter Target="locDetailed.(Grid.RowSpan)" Value="2" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -152,12 +174,12 @@
 
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition />
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
 
-                <ScrollViewer x:ConnectionId='17' Grid.Row="0" Name="scrollContent">
+                <ScrollViewer x:ConnectionId='17' Grid.Row="0" Name="scrollContent" Visibility="Collapsed">
                     <RelativePanel x:ConnectionId='20' Grid.Row="0" 
                                    Margin="12,0,12,0" 
                                    Name="locDetail">
@@ -171,26 +193,44 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition />
                                 <RowDefinition />
+                                <RowDefinition />
                             </Grid.RowDefinitions>
 
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                                <ColumnDefinition />
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
                             <Image x:ConnectionId='23' Source="http://lorempixel.com/200/200/" Name="locPic" HorizontalAlignment="Center"/>
 
                             <StackPanel x:ConnectionId='24' Name="locText" 
                                         HorizontalAlignment="Stretch">
-                                <TextBlock x:ConnectionId='25' Name="locFunction" 
+                                <TextBlock x:ConnectionId='28' Name="locFunction" 
                                            Style="{ThemeResource BodyTextBlockStyle}" 
                                            Margin="0,0,0,24" 
                                            TextWrapping="Wrap"/>
-                                <TextBlock x:ConnectionId='26' Name="locDescription" 
+                                <TextBlock x:ConnectionId='29' Name="locDescription" 
                                            Style="{ThemeResource BodyTextBlockStyle}" 
                                            TextWrapping="Wrap"/>
                             </StackPanel>
+
+                            <Maps:MapControl x:ConnectionId='25'
+                               x:Name="locMap"            
+                               ZoomInteractionMode="GestureAndControl"
+                               TiltInteractionMode="GestureAndControl"   
+                               MapServiceToken="B_u2nd9sP8UJ4raLCWNG6Q"
+                            />
+
+                            <StackPanel x:ConnectionId='26' Name="locDetailed">
+                                <TextBlock Text="Hours of operation" Style="{ThemeResource SubheaderTextBlockStyle}" TextWrapping="Wrap"/>
+
+                                <TextBlock Text="Nearby" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+                                <StackPanel x:ConnectionId='27' Name="locNearbyList">
+                                    
+                                </StackPanel>
+                            </StackPanel>
+
                         </Grid>
                     </RelativePanel>
                 </ScrollViewer>

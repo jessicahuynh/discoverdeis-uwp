@@ -239,42 +239,41 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <ScrollViewer Grid.Row="0" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
-            <Pivot x:ConnectionId='1' Name="MainPivot"                                               Style="{StaticResource CenterPivotTabs}">
-                <PivotItem Margin="0,0,0,0">
-                    <PivotItem.Header>
-                        <local:TabHeader Label="navigate" Glyph="&#xE805;" />
-                    </PivotItem.Header>
-                    <Frame x:ConnectionId='3' Name="navFrame">
 
-                    </Frame>
-                </PivotItem>
-                <PivotItem Margin="0,0,0,0">
-                    <PivotItem.Header>
-                        <local:TabHeader Label="locations" Glyph="&#xE8FD;" />
-                    </PivotItem.Header>
-                    <Frame x:ConnectionId='2' Name="locListFrame">
+        <Pivot x:ConnectionId='1' Name="MainPivot"                                               Style="{StaticResource CenterPivotTabs}">
+            <PivotItem Margin="0,0,0,0">
+                <PivotItem.Header>
+                    <local:TabHeader Label="navigate" Glyph="&#xE805;" />
+                </PivotItem.Header>
+                <Frame x:ConnectionId='3' Name="navFrame">
 
-                    </Frame>
-                </PivotItem>
-                <PivotItem Margin="0,0,0,0">
-                    <PivotItem.Header>
-                        <local:TabHeader Label="tour" Glyph="&#xE707;" />
-                    </PivotItem.Header>
-                    <Frame>
+                </Frame>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0">
+                <PivotItem.Header>
+                    <local:TabHeader Label="locations" Glyph="&#xE8FD;" />
+                </PivotItem.Header>
+                <Frame x:ConnectionId='2' Name="locListFrame">
 
-                    </Frame>
-                </PivotItem>
-                <PivotItem Margin="0,0,0,0">
-                    <PivotItem.Header>
-                        <local:TabHeader Label="search" Glyph="&#xE721;" />
-                    </PivotItem.Header>
-                    <Frame>
+                </Frame>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0">
+                <PivotItem.Header>
+                    <local:TabHeader Label="tour" Glyph="&#xE707;" />
+                </PivotItem.Header>
+                <Frame>
 
-                    </Frame>
-                </PivotItem>
-            </Pivot>
-        </ScrollViewer>
+                </Frame>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0">
+                <PivotItem.Header>
+                    <local:TabHeader Label="search" Glyph="&#xE721;" />
+                </PivotItem.Header>
+                <Frame>
+
+                </Frame>
+            </PivotItem>
+        </Pivot>
 
 
 

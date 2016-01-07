@@ -43,11 +43,23 @@ namespace Discover_Deis
                 locDetail.Width = Window.Current.Bounds.Width - 24;
             }
 
-            scrollContent.Height = Window.Current.Bounds.Height - locProfileCommandBar.ActualHeight - 74;
+            //locMap.Width = locPic.Width;
+            locMap.Height = locPic.Height;
         }
 
         private void listOfLocs_ItemClick(object sender, ItemClickEventArgs e)
         {
+            scrollContent.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            
+            // clear the nearby list
+            if (locNearbyList.Children!= null)
+            {
+                foreach (HyperlinkButton h in locNearbyList.Children)
+                {
+                    locNearbyList.Children.Remove(h);
+                }
+            }
+
             if (Window.Current.Bounds.Width < 720)
             {
                 view.IsPaneOpen = false;
@@ -58,10 +70,13 @@ namespace Discover_Deis
 
             var selectedLoc = (Loc)e.ClickedItem;
             List<string> cat = selectedLoc.category;
+            List<Loc> nearbyLocs = selectedLoc.nearby;
 
             locTitle.Text = selectedLoc.name;
             locFunction.Text = selectedLoc.function;
             locDescription.Text = selectedLoc.description;
+
+            // list categories
             if (cat != null)
             {
                 if (cat.Count == 1)
@@ -79,6 +94,17 @@ namespace Discover_Deis
                     locCategories.Text = c;
                 }
             }
+
+            // list nearby locations
+            if (nearbyLocs != null)
+            {
+                foreach (Loc l in nearbyLocs) {
+                    HyperlinkButton h = new HyperlinkButton();
+                    h.Content = l.name;
+
+                    locNearbyList.Children.Add(h);
+                }
+            }
         }
 
         private void OnBackRequested(object sender, BackRequestedEventArgs e)
@@ -91,7 +117,7 @@ namespace Discover_Deis
             }
         }
 
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             SystemNavigationManager.GetForCurrentView().BackRequested += LocList_BackRequested;
             base.OnNavigatedTo(e);
